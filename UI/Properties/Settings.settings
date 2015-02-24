@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Prisma.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FuenteGeneral" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Tahoma, 8.25pt</Value>
+    </Setting>
+    <Setting Name="FuenteTitulo" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Tahoma, 8.25pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="ColorFondo" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Azure</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

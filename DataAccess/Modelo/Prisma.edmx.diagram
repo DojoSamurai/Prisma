@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="138df02455354acab834535ed8a13e68" Name="Diagram1" >
+        <EntityTypeShape EntityType="Prisma.Empleado" Width="2.375" PointX="1.875" PointY="0.625" />
+        <EntityTypeShape EntityType="Prisma.TipoDocumento" Width="1.5" PointX="5.375" PointY="0.5" />
+        <EntityTypeShape EntityType="Prisma.Categoria" Width="1.5" PointX="7.25" PointY="0.5" />
+        <AssociationConnector Association="Prisma.EmpleadoTipoDocumento" />
+        <AssociationConnector Association="Prisma.EmpleadoCategoria" />
+        <EntityTypeShape EntityType="Prisma.Localidad" Width="1.5" PointX="5" PointY="3.875" />
+        <EntityTypeShape EntityType="Prisma.Provincia" Width="1.5" PointX="6.875" PointY="3.875" />
+        <EntityTypeShape EntityType="Prisma.Pais" Width="1.5" PointX="6.875" PointY="6.25" />
+        <AssociationConnector Association="Prisma.ProvinciaPais" />
+        <AssociationConnector Association="Prisma.LocalidadProvincia" />
+        <AssociationConnector Association="Prisma.EmpleadoLocalidad" />
+        <EntityTypeShape EntityType="Prisma.Antiguedad" Width="1.5" PointX="1.625" PointY="6.125" />
+        <AssociationConnector Association="Prisma.AntiguedadEmpleado" />
+        <EntityTypeShape EntityType="Prisma.AntiguedadDetalle" Width="1.5" PointX="4" PointY="6.125" />
+        <AssociationConnector Association="Prisma.AntiguedadDetalleAntiguedad" />
+        <EntityTypeShape EntityType="Prisma.Establecimiento" Width="1.5" PointX="6" PointY="8.5" />
+        <AssociationConnector Association="Prisma.EstablecimientoAntiguedadDetalle" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
