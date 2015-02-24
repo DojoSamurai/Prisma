@@ -9,7 +9,7 @@
       <Value Profile="(Default)">Tahoma, 8.25pt, style=Bold</Value>
     </Setting>
     <Setting Name="ColorFondo" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Azure</Value>
+      <Value Profile="(Default)">WhiteSmoke</Value>
     </Setting>
   </Settings>
 </SettingsFile>
