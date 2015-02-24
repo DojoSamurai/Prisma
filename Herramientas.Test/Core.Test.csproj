@@ -6,8 +6,8 @@
     <ProjectGuid>{19F3F938-DE23-4694-8115-5EE0BB355F8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Herramientas.Test</RootNamespace>
-    <AssemblyName>Herramientas.Test</AssemblyName>
+    <RootNamespace>Core.Test</RootNamespace>
+    <AssemblyName>Core.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
