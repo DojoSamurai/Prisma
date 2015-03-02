@@ -6,59 +6,59 @@
     <edmx:StorageModels>
     <Schema Namespace="Prisma.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="PrismaStoreContainer">
-    <EntitySet Name="EmpleadoSet" EntityType="Prisma.Store.EmpleadoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TipoDocumentoSet" EntityType="Prisma.Store.TipoDocumentoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CategoriaSet" EntityType="Prisma.Store.CategoriaSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LocalidadSet" EntityType="Prisma.Store.LocalidadSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ProvinciaSet" EntityType="Prisma.Store.ProvinciaSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PaisSet" EntityType="Prisma.Store.PaisSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="AntiguedadSet" EntityType="Prisma.Store.AntiguedadSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="AntiguedadDetalleSet" EntityType="Prisma.Store.AntiguedadDetalleSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="EstablecimientoSet" EntityType="Prisma.Store.EstablecimientoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Empleados" EntityType="Prisma.Store.Empleados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TiposDocumento" EntityType="Prisma.Store.TiposDocumento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categorias" EntityType="Prisma.Store.Categorias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidades" EntityType="Prisma.Store.Localidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Provincias" EntityType="Prisma.Store.Provincias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Paises" EntityType="Prisma.Store.Paises" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Antiguedades" EntityType="Prisma.Store.Antiguedades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AntiguedadesDetalle" EntityType="Prisma.Store.AntiguedadesDetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Establecimientos" EntityType="Prisma.Store.Establecimientos" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EmpleadoCategoria" EntityType="Prisma.Store.EmpleadoCategoria" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="AntiguedadEmpleado" EntityType="Prisma.Store.AntiguedadEmpleado" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="EmpleadoTipoDocumento" Association="Prisma.Store.EmpleadoTipoDocumento">
-      <End Role="Empleado" EntitySet="EmpleadoSet" />
-      <End Role="TipoDocumento" EntitySet="TipoDocumentoSet" />
+      <End Role="Empleado" EntitySet="Empleados" />
+      <End Role="TipoDocumento" EntitySet="TiposDocumento" />
     </AssociationSet>
     <AssociationSet Name="FK_EmpleadoCategoria_Empleado" Association="Prisma.Store.FK_EmpleadoCategoria_Empleado">
-      <End Role="Empleado" EntitySet="EmpleadoSet" />
+      <End Role="Empleado" EntitySet="Empleados" />
       <End Role="EmpleadoCategoria" EntitySet="EmpleadoCategoria" />
     </AssociationSet>
     <AssociationSet Name="FK_EmpleadoCategoria_Categoria" Association="Prisma.Store.FK_EmpleadoCategoria_Categoria">
-      <End Role="Categoria" EntitySet="CategoriaSet" />
+      <End Role="Categoria" EntitySet="Categorias" />
       <End Role="EmpleadoCategoria" EntitySet="EmpleadoCategoria" />
     </AssociationSet>
     <AssociationSet Name="ProvinciaPais" Association="Prisma.Store.ProvinciaPais">
-      <End Role="Provincia" EntitySet="ProvinciaSet" />
-      <End Role="Pais" EntitySet="PaisSet" />
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Pais" EntitySet="Paises" />
     </AssociationSet>
     <AssociationSet Name="LocalidadProvincia" Association="Prisma.Store.LocalidadProvincia">
-      <End Role="Localidad" EntitySet="LocalidadSet" />
-      <End Role="Provincia" EntitySet="ProvinciaSet" />
+      <End Role="Localidad" EntitySet="Localidades" />
+      <End Role="Provincia" EntitySet="Provincias" />
     </AssociationSet>
     <AssociationSet Name="EmpleadoLocalidad" Association="Prisma.Store.EmpleadoLocalidad">
-      <End Role="Empleado" EntitySet="EmpleadoSet" />
-      <End Role="Localidad" EntitySet="LocalidadSet" />
+      <End Role="Empleado" EntitySet="Empleados" />
+      <End Role="Localidad" EntitySet="Localidades" />
     </AssociationSet>
     <AssociationSet Name="FK_AntiguedadEmpleado_Antiguedad" Association="Prisma.Store.FK_AntiguedadEmpleado_Antiguedad">
-      <End Role="Antiguedad" EntitySet="AntiguedadSet" />
+      <End Role="Antiguedad" EntitySet="Antiguedades" />
       <End Role="AntiguedadEmpleado" EntitySet="AntiguedadEmpleado" />
     </AssociationSet>
     <AssociationSet Name="FK_AntiguedadEmpleado_Empleado" Association="Prisma.Store.FK_AntiguedadEmpleado_Empleado">
-      <End Role="Empleado" EntitySet="EmpleadoSet" />
+      <End Role="Empleado" EntitySet="Empleados" />
       <End Role="AntiguedadEmpleado" EntitySet="AntiguedadEmpleado" />
     </AssociationSet>
     <AssociationSet Name="AntiguedadDetalleAntiguedad" Association="Prisma.Store.AntiguedadDetalleAntiguedad">
-      <End Role="AntiguedadDetalle" EntitySet="AntiguedadDetalleSet" />
-      <End Role="Antiguedad" EntitySet="AntiguedadSet" />
+      <End Role="AntiguedadDetalle" EntitySet="AntiguedadesDetalle" />
+      <End Role="Antiguedad" EntitySet="Antiguedades" />
     </AssociationSet>
     <AssociationSet Name="EstablecimientoAntiguedadDetalle" Association="Prisma.Store.EstablecimientoAntiguedadDetalle">
-      <End Role="Establecimiento" EntitySet="EstablecimientoSet" />
-      <End Role="AntiguedadDetalle" EntitySet="AntiguedadDetalleSet" />
+      <End Role="Establecimiento" EntitySet="Establecimientos" />
+      <End Role="AntiguedadDetalle" EntitySet="AntiguedadesDetalle" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="EmpleadoSet">
+  <EntityType Name="Empleados">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -77,21 +77,21 @@
     <Property Name="TipoDocumento_Id" Type="int" Nullable="false" />
     <Property Name="Localidad_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="TipoDocumentoSet">
+  <EntityType Name="TiposDocumento">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="CategoriaSet">
+  <EntityType Name="Categorias">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="LocalidadSet">
+  <EntityType Name="Localidades">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -99,7 +99,7 @@
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Provincia_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="ProvinciaSet">
+  <EntityType Name="Provincias">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -107,21 +107,21 @@
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Pais_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="PaisSet">
+  <EntityType Name="Paises">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="AntiguedadSet">
+  <EntityType Name="Antiguedades">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityType Name="AntiguedadDetalleSet">
+  <EntityType Name="AntiguedadesDetalle">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -134,7 +134,7 @@
     <Property Name="Antiguedad_Id" Type="int" Nullable="false" />
     <Property Name="Establecimiento_Id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="EstablecimientoSet">
+  <EntityType Name="Establecimientos">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -158,8 +158,8 @@
     <Property Name="Empleado_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="EmpleadoTipoDocumento">
-    <End Role="Empleado" Type="Prisma.Store.EmpleadoSet" Multiplicity="*" />
-    <End Role="TipoDocumento" Type="Prisma.Store.TipoDocumentoSet" Multiplicity="1" />
+    <End Role="Empleado" Type="Prisma.Store.Empleados" Multiplicity="*" />
+    <End Role="TipoDocumento" Type="Prisma.Store.TiposDocumento" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="TipoDocumento">
         <PropertyRef Name="Id" />
@@ -170,8 +170,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ProvinciaPais">
-    <End Role="Provincia" Type="Prisma.Store.ProvinciaSet" Multiplicity="*" />
-    <End Role="Pais" Type="Prisma.Store.PaisSet" Multiplicity="1" />
+    <End Role="Provincia" Type="Prisma.Store.Provincias" Multiplicity="*" />
+    <End Role="Pais" Type="Prisma.Store.Paises" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Pais">
         <PropertyRef Name="Id" />
@@ -182,8 +182,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="LocalidadProvincia">
-    <End Role="Localidad" Type="Prisma.Store.LocalidadSet" Multiplicity="*" />
-    <End Role="Provincia" Type="Prisma.Store.ProvinciaSet" Multiplicity="1" />
+    <End Role="Localidad" Type="Prisma.Store.Localidades" Multiplicity="*" />
+    <End Role="Provincia" Type="Prisma.Store.Provincias" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Provincia">
         <PropertyRef Name="Id" />
@@ -194,8 +194,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="EmpleadoLocalidad">
-    <End Role="Empleado" Type="Prisma.Store.EmpleadoSet" Multiplicity="*" />
-    <End Role="Localidad" Type="Prisma.Store.LocalidadSet" Multiplicity="1" />
+    <End Role="Empleado" Type="Prisma.Store.Empleados" Multiplicity="*" />
+    <End Role="Localidad" Type="Prisma.Store.Localidades" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Localidad">
         <PropertyRef Name="Id" />
@@ -206,8 +206,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="AntiguedadDetalleAntiguedad">
-    <End Role="AntiguedadDetalle" Type="Prisma.Store.AntiguedadDetalleSet" Multiplicity="*" />
-    <End Role="Antiguedad" Type="Prisma.Store.AntiguedadSet" Multiplicity="1" />
+    <End Role="AntiguedadDetalle" Type="Prisma.Store.AntiguedadesDetalle" Multiplicity="*" />
+    <End Role="Antiguedad" Type="Prisma.Store.Antiguedades" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Antiguedad">
         <PropertyRef Name="Id" />
@@ -218,8 +218,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="EstablecimientoAntiguedadDetalle">
-    <End Role="Establecimiento" Type="Prisma.Store.EstablecimientoSet" Multiplicity="1" />
-    <End Role="AntiguedadDetalle" Type="Prisma.Store.AntiguedadDetalleSet" Multiplicity="*" />
+    <End Role="Establecimiento" Type="Prisma.Store.Establecimientos" Multiplicity="1" />
+    <End Role="AntiguedadDetalle" Type="Prisma.Store.AntiguedadesDetalle" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Establecimiento">
         <PropertyRef Name="Id" />
@@ -230,7 +230,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_EmpleadoCategoria_Empleado">
-    <End Role="Empleado" Type="Prisma.Store.EmpleadoSet" Multiplicity="1" />
+    <End Role="Empleado" Type="Prisma.Store.Empleados" Multiplicity="1" />
     <End Role="EmpleadoCategoria" Type="Prisma.Store.EmpleadoCategoria" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
@@ -243,7 +243,7 @@
   </Association>
   <Association Name="FK_EmpleadoCategoria_Categoria">
     <End Role="EmpleadoCategoria" Type="Prisma.Store.EmpleadoCategoria" Multiplicity="*" />
-    <End Role="Categoria" Type="Prisma.Store.CategoriaSet" Multiplicity="1" />
+    <End Role="Categoria" Type="Prisma.Store.Categorias" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Categoria">
         <PropertyRef Name="Id" />
@@ -254,7 +254,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_AntiguedadEmpleado_Antiguedad">
-    <End Role="Antiguedad" Type="Prisma.Store.AntiguedadSet" Multiplicity="1" />
+    <End Role="Antiguedad" Type="Prisma.Store.Antiguedades" Multiplicity="1" />
     <End Role="AntiguedadEmpleado" Type="Prisma.Store.AntiguedadEmpleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Antiguedad">
@@ -267,7 +267,7 @@
   </Association>
   <Association Name="FK_AntiguedadEmpleado_Empleado">
     <End Role="AntiguedadEmpleado" Type="Prisma.Store.AntiguedadEmpleado" Multiplicity="*" />
-    <End Role="Empleado" Type="Prisma.Store.EmpleadoSet" Multiplicity="1" />
+    <End Role="Empleado" Type="Prisma.Store.Empleados" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
         <PropertyRef Name="Id" />
@@ -282,46 +282,46 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Prisma" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="PrismaContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="EmpleadoSet" EntityType="Prisma.Empleado" />
-          <EntitySet Name="TipoDocumentoSet" EntityType="Prisma.TipoDocumento" />
-          <EntitySet Name="CategoriaSet" EntityType="Prisma.Categoria" />
+          <EntitySet Name="Empleados" EntityType="Prisma.Empleado" />
+          <EntitySet Name="TiposDocumento" EntityType="Prisma.TipoDocumento" />
+          <EntitySet Name="Categorias" EntityType="Prisma.Categoria" />
           <AssociationSet Name="EmpleadoTipoDocumento" Association="Prisma.EmpleadoTipoDocumento">
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
-            <End Role="TipoDocumento" EntitySet="TipoDocumentoSet" />
+            <End Role="Empleado" EntitySet="Empleados" />
+            <End Role="TipoDocumento" EntitySet="TiposDocumento" />
           </AssociationSet>
           <AssociationSet Name="EmpleadoCategoria" Association="Prisma.EmpleadoCategoria">
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
-            <End Role="Categoria" EntitySet="CategoriaSet" />
+            <End Role="Empleado" EntitySet="Empleados" />
+            <End Role="Categoria" EntitySet="Categorias" />
           </AssociationSet>
-          <EntitySet Name="LocalidadSet" EntityType="Prisma.Localidad" />
-          <EntitySet Name="ProvinciaSet" EntityType="Prisma.Provincia" />
-          <EntitySet Name="PaisSet" EntityType="Prisma.Pais" />
+          <EntitySet Name="Localidades" EntityType="Prisma.Localidad" />
+          <EntitySet Name="Provincias" EntityType="Prisma.Provincia" />
+          <EntitySet Name="Paises" EntityType="Prisma.Pais" />
           <AssociationSet Name="ProvinciaPais" Association="Prisma.ProvinciaPais">
-            <End Role="Provincia" EntitySet="ProvinciaSet" />
-            <End Role="Pais" EntitySet="PaisSet" />
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Pais" EntitySet="Paises" />
           </AssociationSet>
           <AssociationSet Name="LocalidadProvincia" Association="Prisma.LocalidadProvincia">
-            <End Role="Localidad" EntitySet="LocalidadSet" />
-            <End Role="Provincia" EntitySet="ProvinciaSet" />
+            <End Role="Localidad" EntitySet="Localidades" />
+            <End Role="Provincia" EntitySet="Provincias" />
           </AssociationSet>
           <AssociationSet Name="EmpleadoLocalidad" Association="Prisma.EmpleadoLocalidad">
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
-            <End Role="Localidad" EntitySet="LocalidadSet" />
+            <End Role="Empleado" EntitySet="Empleados" />
+            <End Role="Localidad" EntitySet="Localidades" />
           </AssociationSet>
-          <EntitySet Name="AntiguedadSet" EntityType="Prisma.Antiguedad" />
+          <EntitySet Name="Antiguedades" EntityType="Prisma.Antiguedad" />
           <AssociationSet Name="AntiguedadEmpleado" Association="Prisma.AntiguedadEmpleado">
-            <End Role="Antiguedad" EntitySet="AntiguedadSet" />
-            <End Role="Empleado" EntitySet="EmpleadoSet" />
+            <End Role="Antiguedad" EntitySet="Antiguedades" />
+            <End Role="Empleado" EntitySet="Empleados" />
           </AssociationSet>
-          <EntitySet Name="AntiguedadDetalleSet" EntityType="Prisma.AntiguedadDetalle" />
+          <EntitySet Name="AntiguedadesDetalle" EntityType="Prisma.AntiguedadDetalle" />
           <AssociationSet Name="AntiguedadDetalleAntiguedad" Association="Prisma.AntiguedadDetalleAntiguedad">
-            <End Role="AntiguedadDetalle" EntitySet="AntiguedadDetalleSet" />
-            <End Role="Antiguedad" EntitySet="AntiguedadSet" />
+            <End Role="AntiguedadDetalle" EntitySet="AntiguedadesDetalle" />
+            <End Role="Antiguedad" EntitySet="Antiguedades" />
           </AssociationSet>
-          <EntitySet Name="EstablecimientoSet" EntityType="Prisma.Establecimiento" />
+          <EntitySet Name="Establecimientos" EntityType="Prisma.Establecimiento" />
           <AssociationSet Name="EstablecimientoAntiguedadDetalle" Association="Prisma.EstablecimientoAntiguedadDetalle">
-            <End Role="Establecimiento" EntitySet="EstablecimientoSet" />
-            <End Role="AntiguedadDetalle" EntitySet="AntiguedadDetalleSet" />
+            <End Role="Establecimiento" EntitySet="Establecimientos" />
+            <End Role="AntiguedadDetalle" EntitySet="AntiguedadesDetalle" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Empleado">
@@ -455,9 +455,9 @@
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="PrismaStoreContainer" CdmEntityContainer="PrismaContainer">
-    <EntitySetMapping Name="EmpleadoSet">
+    <EntitySetMapping Name="Empleados">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Empleado)">
-        <MappingFragment StoreEntitySet="EmpleadoSet">
+        <MappingFragment StoreEntitySet="Empleados">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Apellido" ColumnName="Apellido" />
@@ -473,57 +473,57 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TipoDocumentoSet">
+    <EntitySetMapping Name="TiposDocumento">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.TipoDocumento)">
-        <MappingFragment StoreEntitySet="TipoDocumentoSet">
+        <MappingFragment StoreEntitySet="TiposDocumento">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CategoriaSet">
+    <EntitySetMapping Name="Categorias">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Categoria)">
-        <MappingFragment StoreEntitySet="CategoriaSet">
+        <MappingFragment StoreEntitySet="Categorias">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LocalidadSet">
+    <EntitySetMapping Name="Localidades">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Localidad)">
-        <MappingFragment StoreEntitySet="LocalidadSet">
+        <MappingFragment StoreEntitySet="Localidades">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProvinciaSet">
+    <EntitySetMapping Name="Provincias">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Provincia)">
-        <MappingFragment StoreEntitySet="ProvinciaSet">
+        <MappingFragment StoreEntitySet="Provincias">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PaisSet">
+    <EntitySetMapping Name="Paises">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Pais)">
-        <MappingFragment StoreEntitySet="PaisSet">
+        <MappingFragment StoreEntitySet="Paises">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AntiguedadSet">
+    <EntitySetMapping Name="Antiguedades">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Antiguedad)">
-        <MappingFragment StoreEntitySet="AntiguedadSet">
+        <MappingFragment StoreEntitySet="Antiguedades">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AntiguedadDetalleSet">
+    <EntitySetMapping Name="AntiguedadesDetalle">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.AntiguedadDetalle)">
-        <MappingFragment StoreEntitySet="AntiguedadDetalleSet">
+        <MappingFragment StoreEntitySet="AntiguedadesDetalle">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="fecha_desde" ColumnName="fecha_desde" />
           <ScalarProperty Name="fecha_hasta" ColumnName="fecha_hasta" />
@@ -533,15 +533,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EstablecimientoSet">
+    <EntitySetMapping Name="Establecimientos">
       <EntityTypeMapping TypeName="IsTypeOf(Prisma.Establecimiento)">
-        <MappingFragment StoreEntitySet="EstablecimientoSet">
+        <MappingFragment StoreEntitySet="Establecimientos">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="EmpleadoTipoDocumento" TypeName="Prisma.EmpleadoTipoDocumento" StoreEntitySet="EmpleadoSet">
+    <AssociationSetMapping Name="EmpleadoTipoDocumento" TypeName="Prisma.EmpleadoTipoDocumento" StoreEntitySet="Empleados">
       <EndProperty Name="TipoDocumento">
         <ScalarProperty Name="Id" ColumnName="TipoDocumento_Id" />
       </EndProperty>
@@ -557,7 +557,7 @@
         <ScalarProperty Name="Id" ColumnName="Categoria_Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="ProvinciaPais" TypeName="Prisma.ProvinciaPais" StoreEntitySet="ProvinciaSet">
+    <AssociationSetMapping Name="ProvinciaPais" TypeName="Prisma.ProvinciaPais" StoreEntitySet="Provincias">
       <EndProperty Name="Pais">
         <ScalarProperty Name="Id" ColumnName="Pais_Id" />
       </EndProperty>
@@ -565,7 +565,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="LocalidadProvincia" TypeName="Prisma.LocalidadProvincia" StoreEntitySet="LocalidadSet">
+    <AssociationSetMapping Name="LocalidadProvincia" TypeName="Prisma.LocalidadProvincia" StoreEntitySet="Localidades">
       <EndProperty Name="Provincia">
         <ScalarProperty Name="Id" ColumnName="Provincia_Id" />
       </EndProperty>
@@ -573,7 +573,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="EmpleadoLocalidad" TypeName="Prisma.EmpleadoLocalidad" StoreEntitySet="EmpleadoSet">
+    <AssociationSetMapping Name="EmpleadoLocalidad" TypeName="Prisma.EmpleadoLocalidad" StoreEntitySet="Empleados">
       <EndProperty Name="Localidad">
         <ScalarProperty Name="Id" ColumnName="Localidad_Id" />
       </EndProperty>
@@ -589,7 +589,7 @@
         <ScalarProperty Name="Id" ColumnName="Empleado_Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="AntiguedadDetalleAntiguedad" TypeName="Prisma.AntiguedadDetalleAntiguedad" StoreEntitySet="AntiguedadDetalleSet">
+    <AssociationSetMapping Name="AntiguedadDetalleAntiguedad" TypeName="Prisma.AntiguedadDetalleAntiguedad" StoreEntitySet="AntiguedadesDetalle">
       <EndProperty Name="Antiguedad">
         <ScalarProperty Name="Id" ColumnName="Antiguedad_Id" />
       </EndProperty>
@@ -597,7 +597,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="EstablecimientoAntiguedadDetalle" TypeName="Prisma.EstablecimientoAntiguedadDetalle" StoreEntitySet="AntiguedadDetalleSet">
+    <AssociationSetMapping Name="EstablecimientoAntiguedadDetalle" TypeName="Prisma.EstablecimientoAntiguedadDetalle" StoreEntitySet="AntiguedadesDetalle">
       <EndProperty Name="Establecimiento">
         <ScalarProperty Name="Id" ColumnName="Establecimiento_Id" />
       </EndProperty>
@@ -618,8 +618,8 @@
     <edmx:Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

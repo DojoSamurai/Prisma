@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="138df02455354acab834535ed8a13e68" Name="Diagram1" >
-        <EntityTypeShape EntityType="Prisma.Empleado" Width="2.375" PointX="1.875" PointY="0.625" />
+        <EntityTypeShape EntityType="Prisma.Empleado" Width="2.375" PointX="1.375" PointY="0.5" />
         <EntityTypeShape EntityType="Prisma.TipoDocumento" Width="1.5" PointX="5.375" PointY="0.5" />
         <EntityTypeShape EntityType="Prisma.Categoria" Width="1.5" PointX="7.25" PointY="0.5" />
         <AssociationConnector Association="Prisma.EmpleadoTipoDocumento" />

@@ -44,6 +44,8 @@
             this.establecimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculoDeAntigüedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.aBMToolStripMenuItem,
-            this.herramientasToolStripMenuItem});
+            this.herramientasToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1027, 24);
@@ -103,13 +106,13 @@
             // empleadosToolStripMenuItem1
             // 
             this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
-            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.empleadosToolStripMenuItem1.Text = "Empleados";
             // 
             // categoríaToolStripMenuItem
             // 
             this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
-            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.categoríaToolStripMenuItem.Text = "Categorías";
             // 
             // categoríasToolStripMenuItem
@@ -168,12 +171,26 @@
             this.calculoDeAntigüedadToolStripMenuItem.Text = "Calculo de antigüedad";
             this.calculoDeAntigüedadToolStripMenuItem.Click += new System.EventHandler(this.calculoDeAntigüedadToolStripMenuItem_Click);
             // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manualToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::Prisma.UI.Properties.Settings.Default.ColorFondo;
-            this.ClientSize = new System.Drawing.Size(1027, 599);
+            this.ClientSize = new System.Drawing.Size(1027, 582);
             this.Controls.Add(this.menuStrip1);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::Prisma.UI.Properties.Settings.Default, "FuenteGeneral", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::Prisma.UI.Properties.Settings.Default, "ColorFondo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -208,6 +225,8 @@
         private System.Windows.Forms.ToolStripMenuItem establecimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculoDeAntigüedadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
     }
 }
 

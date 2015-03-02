@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,22 +40,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <CodeAnalysisDictionary Include="..\..\..\..\Users\cdominguez\AppData\ZooLogicSA\Herramientas\Configuraciones\CustomDictionary.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.133\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFrameworkExtensions">
+      <HintPath>..\packages\EntityFrameworkExtensions.0.9.0.3\lib\net45\EntityFrameworkExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Entity.Design.Extensibility, Version=11.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.identitymodel.services" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -63,49 +76,12 @@
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Establecimiento.cs" />
     <Compile Include="Entidades\TipoDocumento.cs" />
-    <Compile Include="Modelo\Antiguedad.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\AntiguedadDetalle.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Categoria.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Empleado.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Establecimiento.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Localidad.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Pais.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Prisma.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prisma.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\Prisma.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
+    <Compile Include="FactoryDatos.cs" />
     <Compile Include="Modelo\Prisma.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Prisma.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\Provincia.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\TipoDocumento.cs">
-      <DependentUpon>Prisma.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FactoryDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyVersionInfo.cs" />
     <None Include="App.config" />
@@ -113,18 +89,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Prisma.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo\Prisma.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Prisma.edmx</DependentUpon>
-      <LastGenOutput>Prisma.Context.cs</LastGenOutput>
-    </None>
     <None Include="Modelo\Prisma.edmx.diagram">
       <DependentUpon>Prisma.edmx</DependentUpon>
-    </None>
-    <None Include="Modelo\Prisma.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Prisma.edmx</DependentUpon>
-      <LastGenOutput>Prisma.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Settings.StyleCop" />
@@ -135,7 +101,6 @@
   <ItemGroup>
     <Content Include="Modelo\Prisma.edmx.sql" />
   </ItemGroup>
-  <Import Project="C:\ZooLogicSA\Herramientas\Configuraciones\ZooLogic.CodeAnalysis.Rules.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
